@@ -6,7 +6,7 @@ This project is an interactive animated envelope with hearts and confetti. Feel 
 
 ## Respect Open-Source
 
-I built this project inspired by Josh Nichols' CSS Base (https://codepen.io/MrBlank/pen/JjXxovL) under the MIT License.
+I built this project inspired by Josh Nichols' CSS Base under the MIT License.
 
 If you fork or modify this project:
 
