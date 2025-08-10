@@ -1,0 +1,258 @@
+body {
+    background-color: #e7dbef; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#envelope {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    margin: 250px auto 0;
+    background-color: #532768;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+#confetti-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  z-index: 9999;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation-name: fallConfetti;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0.8;
+}
+
+@keyframes fallConfetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+ .front {
+	 position: absolute;
+	 width: 0;
+	 height: 0;
+	 z-index: 3;
+}
+ .flap {
+	 border-left: 140px solid transparent;
+	 border-right: 140px solid transparent;
+	 border-bottom: 82px solid transparent;
+	 border-top: 98px solid  #532768;
+	 transform-origin: top;
+}
+ .pocket {
+	 border-left: 140px solid #6e3482;
+	 border-right: 140px solid #6e3482;
+	 border-bottom: 90px solid #49225b;
+	 border-top: 90px solid transparent;
+	 border-bottom-left-radius: 6px;
+	 border-bottom-right-radius: 6px;
+}
+ .letter {
+	 position: relative;
+	 background-color: #fff;
+	 width: 90%;
+	 margin-left: auto;
+	 margin-right: auto;
+	 height: 90%;
+	 top: 5%;
+	 border-radius: 5px;
+	 padding-top: 10px;
+	 box-shadow: 0 2px 26px #a56abd;
+}
+ .letter:after {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+	 background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 55%, #49225b 100%);
+}
+ .words 
+ .words.line1,
+ .words.line2,
+ .words.line3,
+ .words.line4 {
+	display: block;
+	font-family: "Edu NSW ACT Cursive", cursive;
+	font-weight: 600;
+	font-size: 20px;
+	color: #a56abd;
+	text-align: center;
+	margin: 5px 0;
+}
+ .open .flap {
+	 transform: rotateX(180deg);
+	 transition: transform 0.4s ease, z-index 0.6s;
+	 z-index: 1;
+}
+ .close .flap {
+	 transform: rotateX(0deg);
+	 transition: transform 0.4s 0.6s ease, z-index 1s;
+	 z-index: 5;
+}
+ .close .letter {
+	 transform: translateY(0px);
+	 transition: transform 0.4s ease, z-index 1s;
+	 z-index: 1;
+}
+ .open .letter {
+	 transform: translateY(-60px);
+	 transition: transform 0.4s 0.6s ease, z-index 0.6s;
+	 z-index: 2;
+}
+ .hearts {
+	 position: absolute;
+	 top: 90px;
+	 left: 0;
+	 right: 0;
+	 z-index: 2;
+}
+ .heart {
+	 position: absolute;
+	 bottom: 0;
+	 right: 10%;
+}
+ .heart:before, .heart:after {
+	 position: absolute;
+	 content: "";
+	 left: 20px;
+	 top: 0;
+	 width: 20px;
+	 height: 40px;
+	 background: #a56abd;
+	 border-radius: 50px 50px 0 0;
+	 transform: rotate(-45deg);
+	 transform-origin: 0 100%;
+}
+ .heart:after {
+	 left: 0;
+	 transform: rotate(45deg);
+	 transform-origin: 100% 100%;
+}
+ .close .heart {
+	 opacity: 0;
+	 animation: none;
+}
+ .a1 {
+	 left: 20%;
+	 -webkit-transform: scale(0.6);
+	 -moz-transform: scale(0.6);
+	 transform: scale(0.6);
+	 opacity: 1;
+	 -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+	 -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+	 animation-fill-mode: forwards;
+	 animation-delay: 0.7s;
+}
+ .a2 {
+	 left: 55%;
+	 -webkit-transform: scale(1);
+	 -moz-transform: scale(1);
+	 transform: scale(1);
+	 opacity: 1;
+	 -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+	 -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+	 animation-fill-mode: forwards;
+	 animation-delay: 0.7s;
+}
+ .a3 {
+	 left: 10%;
+	 -webkit-transform: scale(0.8);
+	 -moz-transform: scale(0.8);
+	 transform: scale(0.8);
+	 opacity: 1;
+	 -webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+	 -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+	 animation-fill-mode: forwards;
+	 animation-delay: 0.7s;
+}
+
+
+ @-webkit-keyframes slideUp {
+	 0% {
+		 top: 0;
+	}
+	 100% {
+		 top: -600px;
+	}
+}
+ @keyframes slideUp {
+	 0% {
+		 top: 0;
+	}
+	 100% {
+		 top: -600px;
+	}
+}
+ @-webkit-keyframes sideSway {
+	 0% {
+		 margin-left: 0px;
+	}
+	 100% {
+		 margin-left: 50px;
+	}
+}
+ @keyframes sideSway {
+	 0% {
+		 margin-left: 0px;
+	}
+	 100% {
+		 margin-left: 50px;
+	}
+}
+
+ .envlope-wrapper {
+	 height: 380px;
+}
+
+.reset {
+    margin-top: -140px;
+}
+
+.reset button {
+    font-weight: 800;
+    background-color: #a56abd;
+    border: solid 2px #6e3482;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset button:hover {
+    background-color: #6e3482;
+    color: #fff;
+    transform: scale(1.1);
+}
+ 
