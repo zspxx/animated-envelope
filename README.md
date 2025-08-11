@@ -1,4 +1,4 @@
-# Animated Envelope
+# Animated Envelope[
 **Live Demo:** [Click here to view the website](https://zspxx.github.io/animated-envelope/)
 
 This project is an interactive animated envelope with hearts and confetti. Feel free to use this code for inspiration, personal projects, or learning.
