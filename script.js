@@ -29,9 +29,9 @@ $(document).ready(function() {
 
   function createConfetti() {
     const container = document.getElementById('confetti-container');
-    const colors = ['#cdb4db', '#b497bd', '#9a72ac', '#7b5e7a', '#a593e0'];
-    // const colors = ['#ffe6f0', '#ffd6e0', '#ffc0cb', '#ffb6c1', '#ff9bb9']; - soft pink
-    for (let i = 0; i < 100; i++) {
+    // const colors = ['#cdb4db', '#b497bd', '#9a72ac', '#7b5e7a', '#a593e0'];
+    const colors = ['#ffe6f0', '#ffd6e0', '#ffc0cb', '#ffb6c1', '#ff9bb9']; 
+    for (let i = 0; i < 250; i++) {
       const confetti = document.createElement('div');
       confetti.classList.add('confetti');
       confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
